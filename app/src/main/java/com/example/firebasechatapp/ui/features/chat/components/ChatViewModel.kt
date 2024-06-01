@@ -2,6 +2,7 @@ package com.example.firebasechatapp.ui.features.chat.components
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.firebasechatapp.ui.features.chat.data.AppConfiguration
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.snapshots
 import com.google.firebase.ktx.Firebase
@@ -34,7 +35,11 @@ class ChatViewModel : ViewModel() {
                         sender = it.getString("sender")!!
                     )
                 }
-                _state.value = ChatViewState.Content(messages)
+
+                _state.value = ChatViewState.Content(
+                    emptyScreenMessage = AppConfiguration.getInstance().getEmptyScreenMessage(),
+                    messages = messages
+                )
             }
         }
     }
@@ -55,6 +60,7 @@ sealed interface ChatViewState {
     data object Loading : ChatViewState
 
     data class Content(
+        val emptyScreenMessage: String,
         val messages: List<Message>
     ) : ChatViewState
 }

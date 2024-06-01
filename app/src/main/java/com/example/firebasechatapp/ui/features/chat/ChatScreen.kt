@@ -54,6 +54,7 @@ private fun ChatContent(
             modifier = Modifier
                 .weight(1f)
                 .fillMaxWidth(),
+            emptyScreenMessage = content.emptyScreenMessage,
             messages = content.messages
         )
         ChatInput(
@@ -66,5 +67,8 @@ private fun ChatContent(
 @Preview
 @Composable
 private fun ChatContentPreview() {
-    ChatContent(content = ChatViewState.Content(messages = emptyList()), onMessageSent = {})
+    ChatContent(content = ChatViewState.Content(
+        emptyScreenMessage = "Hey, send a message!",
+        messages = emptyList()
+    ), onMessageSent = {})
 }

@@ -21,14 +21,18 @@ import androidx.compose.ui.unit.dp
  *
  */
 @Composable
-fun ChatMessages(modifier: Modifier = Modifier, messages: List<Message>) {
+fun ChatMessages(
+    modifier: Modifier = Modifier,
+    emptyScreenMessage: String,
+    messages: List<Message>
+) {
     if (messages.isEmpty()) {
         Box(
             modifier = modifier,
             contentAlignment = Alignment.Center) {
             Text(
                 style = MaterialTheme.typography.headlineSmall,
-                text = "Pss, be the first to talk!"
+                text = emptyScreenMessage
             )
         }
         return
@@ -49,6 +53,7 @@ fun ChatMessages(modifier: Modifier = Modifier, messages: List<Message>) {
 @Composable
 private fun ChatMessagesPreview() {
     ChatMessages(
+        emptyScreenMessage = "",
         messages = listOf(
             Message("Hello", "Me"),
             Message("Hi", "You"),
@@ -61,6 +66,7 @@ private fun ChatMessagesPreview() {
 @Composable
 private fun ChatMessagesEmptyPreview() {
     ChatMessages(
+        emptyScreenMessage = "Hey, send a message!",
         messages = emptyList()
     )
 }
