@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "647167085831",
+    "project_id": "testlecture-d734b",
+    "storage_bucket": "testlecture-d734b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647167085831:android:50d53bb03a5e52f21649a2",
+        "android_client_info": {
+          "package_name": "com.example.firebasechatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkfx0jDcQNuDJebv2zytjbs31FxKJ5MzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
