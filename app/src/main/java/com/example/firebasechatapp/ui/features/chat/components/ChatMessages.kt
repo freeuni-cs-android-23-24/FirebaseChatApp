@@ -12,6 +12,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
+
+/**
+ * Composable function to display a list of chat messages.
+ *
+ * @param modifier The modifier to be applied to the root element.
+ * @param messages The list of messages to be displayed.
+ *
+ */
 @Composable
 fun ChatMessages(modifier: Modifier = Modifier, messages: List<Message>) {
     if (messages.isEmpty()) {
