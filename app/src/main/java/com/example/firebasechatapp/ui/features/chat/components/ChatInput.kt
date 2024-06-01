@@ -31,6 +31,7 @@ fun ChatInput(modifier: Modifier = Modifier, onMessageSent: (String) -> Unit) {
         horizontalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         OutlinedTextField(
+            modifier = Modifier.weight(1f),
             value = input,
             onValueChange = { input = it }
         )

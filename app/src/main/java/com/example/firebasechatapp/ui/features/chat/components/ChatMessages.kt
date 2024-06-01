@@ -3,7 +3,6 @@ package com.example.firebasechatapp.ui.features.chat.components
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -30,7 +29,7 @@ fun ChatMessages(modifier: Modifier = Modifier, messages: List<Message>) {
     LazyColumn(
         modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(16.dp),
-        contentPadding = PaddingValues(16.dp)
+        contentPadding = PaddingValues(horizontal = 16.dp)
     ) {
         items(messages.size) {
             MessageItem(message = messages[it])
@@ -45,8 +44,6 @@ private fun ChatMessagesPreview() {
         messages = listOf(
             Message("Hello", "Me"),
             Message("Hi", "You"),
-            Message("How are you?", "Me"),
-            Message("I'm good, thanks!", "You"),
             Message("See you later", "Me"),
         )
     )
