@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults>
+  <entry>
+    <key>chat_empty_screen_message</key>
+    <value>Don't be shy, be the first one to talk!</value>
+  </entry>
+</defaults>
